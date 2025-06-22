@@ -2,8 +2,14 @@ sources:
   "5.15.16-2025.01.23":
     url: "https://invent.kde.org/qt/qt/qt5.git"
     commit: "d76aaaf8ff7277f2640fb785605d267cef891ddb"
+  "5.15.17-2025.06.18":
+    url: "https://invent.kde.org/qt/qt/qt5.git"
+    commit: "0825fcb14dc8171eb3674d8df2337a2e4593f025"
 
 patches:
+  "5.15.17-2025.06.18":
+    #~ - "base_path": "qt5/qtwebengine"
+      #~ "patch_file": "patches/5.15.17-windows-allow-visual-studio-2022.patch"
   "5.15.16-2025.01.23":
     #~ - "base_path": "qt5/qtbase"
       #~ "patch_file": "patches/aa2a39dea5.diff"
