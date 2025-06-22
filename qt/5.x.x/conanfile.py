@@ -172,7 +172,7 @@ class QtConan(ConanFile):
                 msg = (f"Found Python 2 in path, but with invalid version {verstr}"
                        f" (QtWebEngine requires >= {v_min} & < {v_max})\n"
                        "If you have both Python 2 and 3 installed, copy the python 2 executable to"
-                       "python2(.exe)")
+                       " python2(.exe)")
                 raise ConanInvalidConfiguration(msg)
 
     def config_options(self):
