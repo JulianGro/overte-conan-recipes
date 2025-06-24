@@ -1,16 +1,17 @@
 sources:
-  "5.15.16-2025.01.23":
-    url: "https://invent.kde.org/qt/qt/qt5.git"
-    commit: "d76aaaf8ff7277f2640fb785605d267cef891ddb"
-  "5.15.17-2025.06.18":
-    url: "https://invent.kde.org/qt/qt/qt5.git"
-    commit: "0825fcb14dc8171eb3674d8df2337a2e4593f025"
+  "5.15.17-2025.06.07":
+    # Archive created using:
+    # `git clone --recursive --shallow-submodules --depth 1 --revision=0825fcb14dc8171eb3674d8df2337a2e4593f025 https://invent.kde.org/qt/qt/qt5.git`
+    # `python3 -m venv .venv`
+    # `.venv/bin/pip3 install git-archive-all` See: https://github.com/Kentzo/git-archive-all
+    # `.venv/bin/git-archive-all -C qt5 qt-src-5.15.16-2025.06.07-kde_0825fcb14dc8171eb3674d8df2337a2e4593f025.tar.xz`
+    url:
+      - "https://data.moto9000.moe/temp/qt-src-5.15.16-2025.06.07-kde_0825fcb14dc8171eb3674d8df2337a2e4593f025.tar.xz"
+      - "https://build-deps.overte.org/conan/qt5/qt-src-5.15.16-2025.06.07-kde_0825fcb14dc8171eb3674d8df2337a2e4593f025.tar.xz"
+    sha256: "da3653ffdebafdb193d5a9fcde0ce44eea9ab46d39e2241e23cc16546fe07882"
 
 patches:
-  "5.15.17-2025.06.18":
-    #~ - "base_path": "qt5/qtwebengine"
-      #~ "patch_file": "patches/5.15.17-windows-allow-visual-studio-2022.patch"
-  "5.15.16-2025.01.23":
+  "5.15.17-2025.06.07":
     #~ - "base_path": "qt5/qtbase"
       #~ "patch_file": "patches/aa2a39dea5.diff"
     #~ - "base_path": "qt5/qtwebengine"
