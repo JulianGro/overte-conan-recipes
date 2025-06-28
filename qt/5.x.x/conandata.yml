@@ -1,10 +1,13 @@
 sources:
   "5.15.17-2025.06.07":
+    # For some reason, the following has to be done on Windows, otherwise we run into nonsensical build errors on Windows.
     # Archive created using:
     # `git clone --recursive --shallow-submodules --depth 1 --revision=0825fcb14dc8171eb3674d8df2337a2e4593f025 https://invent.kde.org/qt/qt/qt5.git`
     # `python3 -m venv .venv`
     # `.venv/bin/pip3 install git-archive-all` See: https://github.com/Kentzo/git-archive-all
+    # `.\.venv\Scripts\pip3.exe install git-archive-all`
     # `.venv/bin/git-archive-all -C qt5 qt-src-5.15.16-2025.06.07-kde_0825fcb14dc8171eb3674d8df2337a2e4593f025.tar.xz`
+    # `.\.venv\Scripts\git-archive-all -C qt5 qt-src-5.15.16-2025.06.07-kde_0825fcb14dc8171eb3674d8df2337a2e4593f025_win.tar.xz`
     url:
       - "https://data.moto9000.moe/temp/qt-src-5.15.16-2025.06.07-kde_0825fcb14dc8171eb3674d8df2337a2e4593f025.tar.xz"
       - "https://build-deps.overte.org/conan/qt5/qt-src-5.15.16-2025.06.07-kde_0825fcb14dc8171eb3674d8df2337a2e4593f025.tar.xz"
