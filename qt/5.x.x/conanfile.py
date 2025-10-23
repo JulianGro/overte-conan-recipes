@@ -431,7 +431,7 @@ class QtConan(ConanFile):
         if self.options.get_safe("with_openal", False):
             self.requires("openal-soft/1.22.2")
         if self.options.get_safe("with_libalsa", False):
-            self.requires("libalsa/1.2.10")
+            self.requires("libalsa/1.2.12")
         if self.options.get_safe("with_x11"):
             self.requires("xorg/system")
         if self.options.get_safe("with_x11") or self.options.qtwayland:
