@@ -484,7 +484,7 @@ class QtConan(ConanFile):
             self.tool_requires("strawberryperl/[>=5 <6]")
         if self.options.qtwebengine:
             self.tool_requires("ninja/[>=1.12 <2]")
-            self.tool_requires("nodejs/18.15.0")
+            self.tool_requires("nodejs/20.16.0")
             self.tool_requires("gperf/3.1")
             # gperf, bison, flex, python >= 2.7.5 & < 3
             if self._settings_build.os == "Windows":
