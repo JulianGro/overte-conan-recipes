@@ -483,7 +483,7 @@ class QtConan(ConanFile):
             self.tool_requires("jom/[>=1.1 <2]")
             self.tool_requires("strawberryperl/[>=5 <6]")
         if self.options.qtwebengine:
-            self.tool_requires("ninja/[>=1.12 <2]")
+            self.tool_requires("ninja/[>=1.13.2 <2]")
             self.tool_requires("nodejs/18.15.0")
             self.tool_requires("gperf/3.1")
             # gperf, bison, flex, python >= 2.7.5 & < 3
