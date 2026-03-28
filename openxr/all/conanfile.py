@@ -29,6 +29,8 @@ class OpenxrConan(ConanFile):
     def generate(self):
         tc = CMakeToolchain(self)
         tc.variables["DYNAMIC_LOADER"] = self.options.shared
+        # Force using Conan jsoncpp, rather than autodetect.
+        tc.variables["BUILD_WITH_SYSTEM_JSONCPP"] = True
         # Build all extensions, rather than autodetect.
         tc.variables["BUILD_ALL_EXTENSIONS"] = True
         tc.generate()
