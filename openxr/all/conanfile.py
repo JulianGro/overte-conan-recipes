@@ -34,6 +34,9 @@ class OpenxrConan(ConanFile):
         tc.variables["BUILD_WITH_SYSTEM_JSONCPP"] = True
         # Build all extensions, rather than autodetect.
         tc.variables["BUILD_ALL_EXTENSIONS"] = True
+        # Hack to work around OpenXR-loader trying to load manifest files from its build directory,
+        # which can result in "permission denied" errors on the target system.
+        tc.variables["CMAKE_INSTALL_FULL_SYSCONFDIR"] = "/etc"
         tc.generate()
         deps = CMakeDeps(self)
         deps.generate()
