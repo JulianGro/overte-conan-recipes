@@ -20,6 +20,8 @@ class OpenxrConan(ConanFile):
 
     def requirements(self):
         self.requires("jsoncpp/1.9.6")
+        self.requires("vulkan-headers/1.4.313.0")  # Whatever version Overte's other dependencies use.
+        self.requires("vulkan-loader/1.4.313.0")  # Whatever version Overte's other dependencies use.
 
     def source(self):
         get(self, **self.conan_data["sources"][self.version], strip_root=True)
@@ -27,6 +29,8 @@ class OpenxrConan(ConanFile):
     def generate(self):
         tc = CMakeToolchain(self)
         tc.variables["DYNAMIC_LOADER"] = self.options.shared
+        # Build all extensions, rather than autodetect.
+        tc.variables["BUILD_ALL_EXTENSIONS"] = True
         tc.generate()
         deps = CMakeDeps(self)
         deps.generate()
