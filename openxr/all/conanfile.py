@@ -26,8 +26,7 @@ class OpenxrConan(ConanFile):
 
     def generate(self):
         tc = CMakeToolchain(self)
-        tc.variables["BUILD_SHARED"] = self.options.shared
-        tc.variables["USE_LIBCXX"] = "OFF"
+        tc.variables["DYNAMIC_LOADER"] = self.options.shared
         tc.generate()
         deps = CMakeDeps(self)
         deps.generate()
