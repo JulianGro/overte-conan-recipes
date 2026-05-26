@@ -11,7 +11,7 @@ import shutil
 
 class AqtConan(ConanFile):
     name = "qt"
-    version = "6.10.3"
+    version = "6.11.1"
     author = "Julian Groß (julian.gro@overte.org) & Edgar (Edgar@AnotherFoxGuy.com)"
     settings = "os", "arch"
     options = {
