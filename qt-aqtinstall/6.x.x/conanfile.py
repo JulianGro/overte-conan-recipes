@@ -11,7 +11,7 @@ import shutil
 
 class AqtConan(ConanFile):
     name = "qt"
-    version = "6.11.1"
+    version = "6.11.2"
     author = "Julian Groß (julian.gro@overte.org) & Edgar (Edgar@AnotherFoxGuy.com)"
     settings = "os", "arch"
     options = {
@@ -23,7 +23,7 @@ class AqtConan(ConanFile):
 
     def source(self):
         if platform.system() == "Windows":
-            download(self, "https://github.com/miurahr/aqtinstall/releases/latest/download/aqt.exe",
+            download(self, "https://build-deps.overte.org/conan/aqt/aqt_x64_2026-09-17_076e165_patched.exe",
                      "aqt.exe")
         else:
             Exception("This Conan AQT package only supports Windows.")
